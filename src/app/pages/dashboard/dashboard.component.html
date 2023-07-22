@@ -1,0 +1,25 @@
+<div class="card">
+
+  <mat-toolbar color="primary">
+    <span>User Management</span>
+    <div class="spacer"></div>
+     <a mat-button>Home</a>
+     <a mat-button>About</a>
+     <a mat-button>Contact</a>
+      <p-avatar image="https://primefaces.org/cdn/primeng/images/demo/avatar/amyelsner.png" pBadge value="4" severity="danger"></p-avatar>
+   </mat-toolbar>
+<div *ngFor="let item of grocery; let i = index" class="container">
+
+  <div>
+    {{i +1}} - {{item.name}}
+</div>
+  <div>
+    {{item.price}}
+  </div>
+  
+  <div>
+    {{item.weight}}
+  </div>
+</div>
+</div>
+

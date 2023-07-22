@@ -1,1 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
+@import '@angular/material/prebuilt-themes/indigo-pink.css';
+@import 'primeng/resources/themes/saga-blue/theme.css';
+@import 'primeng/resources/primeng.min.css';
+@import 'primeicons/primeicons.css';
+
+.container{
+    align-items: center;
+    border: 1px solid black;
+    margin-bottom: 1 rem;
+    padding-top: 1 rem;
+}
