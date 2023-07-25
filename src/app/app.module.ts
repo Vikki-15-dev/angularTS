@@ -21,6 +21,8 @@ import {AvatarModule } from 'primeng/avatar';
 
 import { DividerModule } from 'primeng/divider';
 import { ButtonModule } from 'primeng/button';
+import { ReactiveFormsModule } from '@angular/forms';
+
 
 
 @NgModule({
@@ -42,7 +44,7 @@ import { ButtonModule } from 'primeng/button';
     AvatarModule,
     DividerModule,
     InputTextModule,
-
+    ReactiveFormsModule,
     ButtonModule
   ],
   providers: [ConfirmationService, MessageService],

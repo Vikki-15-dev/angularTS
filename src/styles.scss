@@ -4,9 +4,10 @@
 @import 'primeng/resources/primeng.min.css';
 @import 'primeicons/primeicons.css';
 
-.container{
-    align-items: center;
-    border: 1px solid black;
-    margin-bottom: 1 rem;
-    padding-top: 1 rem;
+
+.requiredField{
+    color: red;
+    font-size: x-small;
+    display: inline-flex;
+
 }
