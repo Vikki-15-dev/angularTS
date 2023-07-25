@@ -12,11 +12,15 @@ export class LoginComponent {
   loginForm: FormGroup = new FormGroup({});
   signUpForm: FormGroup = new FormGroup({});
 
+  
+  errorMessage : string;
+
   // Hardcoded credentials for demonstration purposes
   hardcodedUsername = 'user123';
   hardcodedPassword = 'password123';
 
   constructor(private formBuilder: FormBuilder) {
+    this.errorMessage = "";
  }
  ngOnInit() {
      this.loginForm = this.formBuilder.group({
@@ -37,6 +41,7 @@ get loginPassword() {
 
 
   onLogin() {
+
     if (this.loginForm.valid) {
       const { username, password } = this.loginForm.value;
 
@@ -44,16 +49,22 @@ get loginPassword() {
       if (username === this.hardcodedUsername && password === this.hardcodedPassword) {
         // Authentication successful, perform any required action (e.g., redirect to home page)
         console.log('Login successful!');
-      } else {
-        // Authentication failed, show error message to the user
+        this.errorMessage = '';
+      }   
+      else {
+        this.errorMessage = 'Invalid username or password. Please try again.';
         console.log('Invalid username or password. Please try again.');
       }
-    } else {
-      // Handle form validation errors (if any)
+    }
+     else {
+      
+      this.errorMessage = 'Invalid username or password. Please try again.';
       console.log('Login form is invalid. Please fill in all required fields.');
     }
+   
   }
-
-
+  clearErrorMessage() {
+    this.errorMessage = '';
+  }
 }
 
