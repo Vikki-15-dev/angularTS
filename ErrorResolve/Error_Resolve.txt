@@ -1,0 +1,2 @@
+Error 1 : Dependency Tree Error Fix
+npm config set legacy-peer-deps true
